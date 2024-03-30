@@ -1,0 +1,285 @@
+// ========================= [ Header styles ] =========================
+.header {
+  &.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+}
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.logo {
+  a {
+    display: block;
+    width: 120px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// ========================== [ Menu styles ] ==========================
+.menu {
+  display: flex;
+  gap: 30px;
+
+  // .menu__item
+  &__item {
+    display: flex;
+    position: relative;
+  }
+
+  // .menu__item-link
+  &__item-link {
+    color: #fff;
+    opacity: 0.5;
+    display: flex;
+    position: relative;
+    transition: all 0.5s;
+    font-size: 16px;
+    &.active {
+      opacity: 1;
+      &::before {
+        content: "";
+        background: linear-gradient(
+          -8.53deg,
+          rgb(38, 255, 242) 26.767%,
+          rgb(50, 108, 255) 42.283%
+        );
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -3px;
+      background: #131418;
+      height: 1px;
+      width: 100%;
+      transform: scale(0);
+      transition: 0.5s transform;
+
+      // Comment if you need border animation
+      display: none;
+    }
+    &:hover {
+      transition: all 0.5s;
+      color: #ffff;
+      opacity: 1;
+      &:after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  // Mobile menu styles
+  @media screen and (max-width: $burgerBreakpoint) {
+    position: fixed;
+    background: $burgerColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+
+    &.active {
+      display: flex;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      flex-direction: column;
+      pointer-events: all;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      animation: fade 0.1s linear;
+    }
+  }
+}
+
+// ========================= [ Burger styles ] =========================
+.burger {
+  display: none;
+  background: transparent;
+  z-index: 3;
+
+  @media screen and (max-width: $burgerBreakpoint) {
+    display: flex;
+    position: relative;
+    height: 20px;
+    width: 30px;
+
+    &.active {
+      position: absolute;
+      right: 40px;
+      &:before {
+        background: $burgerActiveColor;
+        transform: rotate(45deg);
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        top: 8px;
+      }
+
+      &:after {
+        background: $burgerActiveColor;
+        transform: rotate(-45deg);
+        bottom: 10px;
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+      }
+
+      & span {
+        transform: scale(0);
+      }
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      position: absolute;
+      top: 9px;
+      right: 0;
+      width: 100%;
+      background: #fff;
+      height: 2px;
+      transform: scale(1);
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    }
+  }
+}
+
+// ========================= [ nav-user styles ] =========================
+.navigation {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__item:nth-child(2n) {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      background: linear-gradient(
+        180deg,
+        rgb(50, 108, 255),
+        rgb(38, 255, 242) 100%
+      );
+      width: 6.67px;
+      height: 7.07px;
+      border-radius: 50%;
+      right: 0;
+    }
+  }
+
+  &__item {
+    padding-left: 20px;
+  }
+  &__svg {
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  &__search {
+    width: 18px;
+    height: 18px;
+    fill: transparent;
+    stroke: #fff;
+    fill: none;
+    &:hover {
+      stroke: #26fff2;
+      transition: all 0.5s;
+    }
+  }
+
+  &__message {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s;
+    position: relative;
+    &:hover {
+      fill: #26fff2;
+      transition: all 0.5s;
+    }
+  }
+
+  &__user {
+    fill: #fff;
+    width: 18px;
+    height: 19.27px;
+    transition: all 0.5s;
+    &:hover {
+      fill: #26fff2;
+      transition: all 0.5s;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .navigation {
+    &__item {
+      padding-left: 40px;
+    }
+  }
+}
+@media (min-width: 650px) {
+  .navigation {
+    &__item {
+      padding-left: 60px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    gap: 30px;
+  }
+  .navigation {
+    &__item {
+      padding: 0;
+    }
+    &__item + .navigation__item {
+      padding-left: 30px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .menu {
+    gap: 54px;
+  }
+  .navigation {
+    &__item {
+      padding: 0;
+    }
+    &__item + .navigation__item {
+      padding-left: 75px;
+    }
+  }
+}
