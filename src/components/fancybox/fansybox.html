@@ -1,18 +1,20 @@
 <!-- силка  на стили  -->
 <link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
 />
 <!-- html  -->
-<a data-fancybox="gallery" href="картинка по переходу будет"><img class="package__image" src="картинка какая будет показываться"/></a>
-
-
-
+<a data-fancybox="gallery" href="картинка по переходу будет"
+  ><img class="package__image" src="картинка какая будет показываться"
+/></a>
 <!--js  силка на скрипт -->
-
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
 <!--js  инстализации -->
 <script>
   Fancybox.bind('[data-fancybox="gallery"]', {});
 </script>
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- 1 потключить стили @import './libs/fancybox';
+2 @@include('./libs//fancybox(lib).js')  потключить жс
+3 инстализация Fancybox.bind('[data-fancybox="gallery"]', {});
+ -->

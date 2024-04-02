@@ -1,0 +1,29 @@
+.shows {
+  &__link {
+    display: block;
+  }
+}
+
+.swiperShows {
+  overflow: hidden;
+  padding-top: 60px;
+  .cart { 
+    width: 206px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.9;
+    width: 100%;
+    img {
+      width: 100%;
+      transition: all 0.9;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .swiperShows {
+    padding-top: 266px;
+    .cart{
+      width: 206px;
+    }
+  }
+}

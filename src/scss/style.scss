@@ -6,9 +6,14 @@
 
 // Sections or Pages SCSS-files imports
 @import './header';
-
-// @import './footer';
+@import './herro';
+@import './shows';
+@import './movies';
+@import './popular';
+@import './actors';
+@import './benifit';
+@import './footer';
 
 // Libs
-/* @import './libs/fancybox'; */
-// @import './libs/swiper';
+@import './libs/fancybox';
+@import './libs/swiper';

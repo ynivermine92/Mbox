@@ -1,5 +1,5 @@
 // Container & Breakpoints
-@use 'sass:math';
+@use "sass:math";
 $containerWidth: 1435;
 $containerPadding: 40;
 $containerSidePadding: math.div($containerPadding, 2);
@@ -18,24 +18,32 @@ $burgerActiveColor: #fefefe;
 
 // Fonts
 $fontMain: sans-serif;
-$fontSecondary: '';
+$fontSecondary: "";
 
-
-%Mul-400{
-    font-family: 'Mulish-Bold';
-    font-weight: 400;
+%Mul-400 {
+  font-family: "Mulish-Regular";
+  font-weight: 400;
 }
-%Mul-600{
-    font-family: 'Mulish-SemiBold';
-    font-weight: 600;
+%Mul-600 {
+  font-family: "Mulish-SemiBold";
+  font-weight: 600;
 }
-%Mul-700{
-    font-family: 'Mulish-Bold';
-    font-weight: 700;
-}
-
-%Mul-800{
-    font-family: 'Mulish-ExtraBold';
-    font-weight: 800;
+%Mul-700 {
+  font-family: "Mulish-Bold";
+  font-weight: 700;
 }
 
+%Mul-800 {
+  font-family: "Mulish-ExtraBold";
+  font-weight: 800;
+}
+
+%Awe-400 {
+  font-family: "FontAwesome";
+  font-weight: 400;
+}
+
+%Mar-400 {
+  font-family: "Marcellus-Regular";
+  font-weight: 400;
+}

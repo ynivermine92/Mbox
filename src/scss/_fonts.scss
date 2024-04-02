@@ -1,18 +1,20 @@
+
 @font-face {
-  font-family: "Marcellus-Regular";
+  font-family: "Mulish-Regular";
   font-weight: 400;
   font-style: normal;
-  src: local("Marcellus-Regular"),
-    url("../fonts/Marcellus-Regular.woff2") format("woff2"),
-    url("../fonts/Marcellus-Regular.woff") format("woff");
+  src: local("Mulish-SemiBold"),
+    url("../fonts/Mulish-Regular.woff2") format("woff2"),
+    url("../fonts/Mulish-Regular.woff") format("woff");
   font-display: swap;
 }
 
+
 @font-face {
-  font-family: "Marcellus-Regular";
-  font-weight: 400;
+  font-family: "Mulish-SemiBold";
+  font-weight: 600;
   font-style: normal;
-  src: local("Marcellus-Regular"),
+  src: local("Mulish-SemiBold"),
     url("../fonts/Mulish-SemiBold.woff2") format("woff2"),
     url("../fonts/Mulish-SemiBold.woff") format("woff");
   font-display: swap;
@@ -41,7 +43,8 @@
   font-family: "FontAwesome";
   font-weight: 400;
   font-style: normal;
-  src: local("FontAwesome"), url("../fonts/FontAwesome.woff2") format("woff2"),
+  src: local("FontAwesome"), 
+    url("../fonts/FontAwesome.woff2") format("woff2"),
     url("../fonts/FontAwesome.woff") format("woff");
   font-display: swap;
 }
@@ -50,8 +53,8 @@
   font-family: "Marcellus-Regular";
   font-weight: 400;
   font-style: normal;
-  src: local("Marcellus-Regular."),
+  src: local("Marcellus-Regular"),
     url("../fonts/Marcellus-Regular.woff2") format("woff2"),
-    url("../fonts/Marcellus-Regular.woff2") format("woff");
+    url("../fonts/Marcellus-Regular.woff") format("woff");
   font-display: swap;
 }
