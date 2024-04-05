@@ -27,3 +27,12 @@ function bindModal(trigger, modal, close) {
 // ВТОРОЙ аргумент - класс самого модального окна.
 // ТРЕТИЙ аргумент - класс кнопки, при клике на которую будет закрываться модальное окно.
 bindModal('.modal__btn', '.modal__wrapper', '.modal__close')
+
+
+
+
+
+
+
+
+

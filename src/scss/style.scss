@@ -6,6 +6,7 @@
 
 // Sections or Pages SCSS-files imports
 @import './header';
+@import './search';
 @import './herro';
 @import './shows';
 @import './movies';
@@ -13,6 +14,12 @@
 @import './actors';
 @import './benifit';
 @import './footer';
+
+
+@import './modal';
+@import './modalThank';
+@import './modalRegist';
+
 
 // Libs
 @import './libs/fancybox';

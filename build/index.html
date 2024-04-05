@@ -53,7 +53,7 @@
               <use xlink:href="img/header/message.svg#message"></use>
             </svg>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item modal__btn">
             <svg class="navigation__svg navigation__user">
               <use xlink:href="img/header/user.svg#user"></use>
             </svg>
@@ -63,6 +63,20 @@
     </div>
   </div> 
 </header>
+
+    <div class="search">
+  <div class="conanter">
+    <div class="search__wrarpper">
+      <form class="search__form" action="#">
+        <input class="search__input" placeholder="поиск" />
+        <button class="search__btn">
+          <img class="search__btn-img" src="img/header/search.png" alt="#" />
+        </button>
+      </form>
+      <div class="search__btn-clouse">X</div>
+    </div>
+  </div>
+</div>
 
     <!-- Main Page -->
     <main>
@@ -342,6 +356,49 @@
   </div>
 </section>
 
+      <!-- Modal -->
+<div class="modalRegist__wrapper">
+    <div class="modalRegist">
+        <div class="modalRegist__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
+        <div class="modalRegist__title"><span>регистрация</span> </div>
+        <div class="modalRegist__body">
+            <div class="modalRegist__regist">перейти к входу</div>
+            <form class="modalRegist__form" action="">
+                <input placeholder="email@" class="modalRegist__input modal__email" type="email">
+                <input  placeholder="телефон" class="modalRegist__input modalRegist__tell" type="tel" value="+38" placeholder="+380-00-000-00-00">
+                <button class="modalRegist__button">регистрация</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+      <!-- Modal -->
+<div class="modalThank__wrapper">
+    <div class="modalThank">
+        <div class="modalThank__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
+        <div class="modalThank__title"><span>Modal Title</span> </div>
+        <div class="modalThank__body">Modal Body</div>
+    </div>
+</div>
+
+      <!-- Modal -->
+<div class="modal__wrapper">
+    <div class="modal">
+        <div class="modal__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
+        <div class="modal__title"><span>Авторизация</span> </div>
+        <div class="modal__body">
+            <div class="modal__verification">перейдите к регистрации </div>
+            <form class="modal__form" action="">
+                <input placeholder="ведите email@" class="modal__input modal__mail" type="email">
+                <input placeholder="ведите пароль"  class="modal__input modal__password" type="text">
+                <button class="modal__button">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
     </main>
     <!-- Footer -->
     <footer class="footer">
@@ -412,5 +469,6 @@
 </footer>
 
   </body>
+  <script src="https://unpkg.com/imask"></script>
   <script src="./js/scripts.min.js"></script>
 </html>

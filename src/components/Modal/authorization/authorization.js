@@ -1,129 +1,4 @@
-// burger
-function burgerMenu() {
-  const burger = document.querySelector('.burger')
-  const menu = document.querySelector('.menu')
-  const body = document.querySelector('body')
-  burger.addEventListener('click', () => {
-    if (!menu.classList.contains('active')) {
-      menu.classList.add('active')
-      burger.classList.add('active')
-      body.classList.add('locked')
-    } else {
-      menu.classList.remove('active')
-      burger.classList.remove('active')
-      body.classList.remove('locked')
-    }
-  })
-  // Вот тут мы ставим брейкпоинт навбара
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 991.98) {
-      menu.classList.remove('active')
-      burger.classList.remove('active')
-      body.classList.remove('locked')
-    }
-  })
-}
-burgerMenu()
-
-//<script>
-/* Fancybox */
-Fancybox.bind('[data-fancybox="gallery"]', {});
-
-
-
-
-
-//sliderShows
-const swiperShows = new Swiper('.swiperShows', {
-  slidesPerView: 6,
-  // If we need pagination
-  slidesPerView: 'auto',
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 320px
-    360: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-    },
-    660: {
-      slidesPerView: 4,
-      spaceBetween: 20
-    },
-    768: {
-      slidesPerView: 5,
-      spaceBetween: 20
-    },
-    992: {
-      slidesPerView: 4,
-      spaceBetween: 41
-    },
-    1100: {
-      slidesPerView: 5,
-      spaceBetween: 41
-    },
-    1500: {
-      slidesPerView: 6,
-      spaceBetween: 41
-    },
-
-  }
-
-});
-//sliderMovies
-const swiperMovies = new Swiper('.swiperMovies', {
-  slidesPerView: 6,
-  // If we need pagination
-  slidesPerView: 'auto',
-  loop: true,
-  autoplay: {
-    delay: 7000,
-    disableOnInteraction: false,
-  },
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 320px
-    360: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-    },
-    660: {
-      slidesPerView: 4,
-      spaceBetween: 20
-    },
-    768: {
-      slidesPerView: 5,
-      spaceBetween: 20
-    },
-    992: {
-      slidesPerView: 4,
-      spaceBetween: 41
-    },
-    1100: {
-      slidesPerView: 5,
-      spaceBetween: 41
-    },
-    1500: {
-      slidesPerView: 6,
-      spaceBetween: 41
-    },
-
-  }
-
-});
-// mask
+//Mask
 const Mask = () => {
   const maskElement = document.querySelector('.modalRegist__tell')
   const maskOptions = {
@@ -159,6 +34,7 @@ function bindModal(trigger, modal, close) {
   })
 }
 bindModal('.modal__btn', '.modal__wrapper', '.modal__close')
+
 
 /* regular */
 const modelRegular = () => {
@@ -237,9 +113,6 @@ const modelRegular = () => {
     ModalRegistWrapper.style.display = 'flex'
   })
 
-
-
-
   /* ModalRegist */
   const ModalRegistWrapper = document.querySelector('.modalRegist__wrapper');
   const ModalRegisLink = document.querySelector('.modalRegist__regist');
@@ -248,8 +121,6 @@ const modelRegular = () => {
   const ModalRegisInputEmail = document.querySelector('.modal__email');
   const ModalRegitBtn = document.querySelector('.modalRegist__button');
   const ModalRegitClouse = document.querySelector('.modalRegist__close');
-
-
 
   /*ModalRegist Valid */
 
@@ -333,19 +204,3 @@ const modelRegular = () => {
 
 };
 modelRegular();
-
-
-const search = () => {
-  const searchBtn = document.querySelector('.search__btn-clouse');
-  const search = document.querySelector('.search');
-  const searchImage = document.querySelector('.navigation__search');
-  
-
-  searchBtn.addEventListener('click', ()=>{
-    search.classList.add('active')
-  })  
-  searchImage.addEventListener('click', ()=>{
-    search.classList.remove('active')
-  })  
-}
-search();
