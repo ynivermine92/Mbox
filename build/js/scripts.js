@@ -45,11 +45,6 @@ burgerMenu()
 //<script>
 /* Fancybox */
 Fancybox.bind('[data-fancybox="gallery"]', {});
-
-
-
-
-
 //sliderShows
 const swiperShows = new Swiper('.swiperShows', {
   slidesPerView: 6,
@@ -359,10 +354,11 @@ const search = () => {
   
 
   searchBtn.addEventListener('click', ()=>{
-    search.classList.add('active')
+    search.classList.remove('active')
   })  
   searchImage.addEventListener('click', ()=>{
-    search.classList.remove('active')
+    search.classList.add('active')
+
   })  
 }
 search();
